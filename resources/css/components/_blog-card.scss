@@ -1,0 +1,126 @@
+.blog-card {
+    height: 100%;
+    .blog-img {
+        overflow: hidden;
+        border-radius: 10px 40px 0 0;
+        height: 250px;
+        img {
+            border-radius: 10px 40px 0 0;
+            transition: $transition;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    .blog-content {
+        padding: 30px;
+        border: 1px solid $primary-color;
+        border-radius: 0px 0px 40px 10px;
+        transition: $transition;
+        background-color: $light-color;
+        height: calc(100% - 250px);
+        .date-admin {
+            ul {
+                padding-left: 0;
+                margin-bottom: 20px;
+
+                li {
+                    list-style-type: none;
+                    position: relative;
+                    padding-left: 20px;
+
+                    i {
+                        position: absolute;
+                        left: 0;
+                        color: $primary-color;
+                    }
+
+                    a {
+                        color: $black-color;
+                    }
+                }
+            }
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            transition: $transition;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .default-btn {
+            margin-top: 5px;
+        }
+    }
+
+    &:hover {
+        .blog-img {
+            border-radius: 10px 40px 0 0;
+
+            img {
+                transform: scale(1.2) rotate(5deg);
+                border-radius: 10px 40px 0 0;
+            }
+        }
+
+        .blog-content {
+            box-shadow: $box-shadow;
+            border: 1px solid transparent;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .blog-card {
+        .blog-content {
+            padding: 15px;
+            .date-admin {
+                ul {
+                    margin-bottom: 15px;
+                }
+            }
+
+            h3 {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.theme-dark {
+    .blog-card {
+        .blog-content {
+            background-color: #0e0e0e;
+        }
+    }
+}
+
+.rtl{
+    .blog-card {
+        .blog-content {
+            .date-admin {
+                ul {
+                    padding-right: 0;
+                    li {
+                        padding-left: 0;
+                        padding-right: 20px;
+                        i {
+                            left: unset;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@import "../default/_generale";
+@import "../components/_page-banner";
+@import "../components/_inner-content";
+@import "../components/_service-sub-card";
+
+.services-area {
+    .container-fluid {
+        max-width: 1520px;
+    }
+
+    .row {
+        .col-lg-6 {
+            &:nth-child(2) {
+                .service-sub-card {
+                    border-radius: 10px 40px 10px 10px;
+                }
+            }
+
+            &:nth-child(3) {
+                .service-sub-card {
+                    border-radius: 10px 10px 10px 40px;
+                }
+            }
+
+            &:nth-child(4) {
+                .service-sub-card {
+                    border-radius: 10px 10px 40px 10px;
+                }
+            }
+        }
+    }
+
+    .provide-bg {
+        background: rgba($primary-color, 0.05);
+    }
+}
+
+.side-contact{
+    box-shadow: $box-shadow;
+    padding: 20px;
+    .contact-doctor-form{
+        .col-lg-6 {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+    }
+}
+
+.theme-dark {
+    .provide-bg {
+        background-color: #0e0e0e;
+    }
+}

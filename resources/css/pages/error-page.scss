@@ -1,0 +1,92 @@
+@import "../default/_generale";
+
+.error-area {
+    text-align: center;
+    background: #efefef;
+    .top-content {
+        margin-bottom: 20px;
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            li {
+                font-size: 200px;
+                font-weight: 700;
+                display: inline-block;
+                line-height: 1;
+                margin-right: 30px;
+                color: $primary-color;
+                animation: movebounce 5s linear infinite;
+                &:first-child {
+                    color: $black-color;
+                    animation: movebounce 7s linear infinite;
+                }
+                &:last-child {
+                    color: $black-color;
+                    animation: movebounce 9s linear infinite;
+                }
+            }
+        }
+    }
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: $black-color !important;
+    }
+    p {
+        margin-bottom: 30px;
+        color: $black-color;
+    }
+
+    .default-btn{
+        color: $black-color;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 991px) {
+    .error-area {
+        .top-content {
+            ul {
+                li {
+                    font-size: 70px;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.rtl{
+    .error-area {
+        .top-content {
+            ul {
+                padding-right: 0;
+                li {
+                    margin-right: 0;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .error-area {
+            .top-content {
+                ul {
+                    li {
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

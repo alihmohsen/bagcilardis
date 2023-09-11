@@ -1,0 +1,88 @@
+.accordion {
+    .accordion-item {
+        margin-bottom: 20px;
+        border: 1px solid $primary-color;
+        border-radius: 10px;
+
+        .accordion-button {
+            border: none;
+            background-color: transparent;
+            color: $black-color;
+            font-size: 16px;
+            font-weight: 700;
+            position: relative;
+            margin-bottom: 0;
+
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            &:not(.collapsed) {
+                box-shadow: unset;
+            }
+
+            &::after {
+                background-image: unset;
+                content: "";
+                font-size: 20px;
+                color: $black-color;
+                text-align: center;
+                content: "\ea13";
+                font-family: 'remixicon' !important;
+                position: relative;
+                top: -4px;
+            }
+
+            &:not(.collapsed)::after {
+                background-image: unset;
+                text-align: center;
+                content: "\f1af";
+                position: relative;
+                top: -2px;
+            }
+        }
+
+        .accordion-body {
+            padding-top: 0;
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .accordion {
+        .accordion-item {
+            margin-bottom: 15px;
+
+            .accordion-button {
+                font-size: 14px;
+                padding: 15px 10px 15px 15px;
+
+                &::after {
+                    font-size: 14px;
+                }
+            }
+
+            .accordion-body {
+                font-size: 13px;
+                padding: 0 15px 15px 15px;
+            }
+        }
+    }
+}
+
+.theme-dark {
+    .accordion {
+        .accordion-item {
+            background-color: #181717;
+
+            .accordion-button {
+                color: $light-color;
+                &::after{
+                    color: $light-color;
+                }
+            }
+        }
+    }
+}

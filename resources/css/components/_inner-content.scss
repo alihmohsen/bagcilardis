@@ -1,0 +1,154 @@
+@import "../default/_variables";
+
+.inner-content{
+    div{
+        width: 100% !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: transparent !important;
+    }
+
+    a{
+        color: $primary-color;
+        text-decoration: none;
+        &:hover,&:focus{
+            text-decoration: none;
+        }
+    }
+
+    a.tabs{
+        color: $black-color;
+        &:hover,&:focus{
+            color: $primary-color;
+            transition: all 0.4s ease-in-out;
+        }
+    }
+
+    span,p{
+        font-family: inherit !important;
+        background: transparent !important;
+    }
+
+    h2,h3,h4{
+        color: $primary-color !important;
+        span{color: $primary-color !important}
+    }
+
+    h2{font-size: 1.3rem !important;}
+    h4,h3{font-size: 1.2rem !important;}
+    h5{font-size: 1.1rem !important;}
+
+    h2,h3,h4,h5,h6{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-family: inherit !important;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        span{font-size: 1rem !important;}
+    }
+
+    table tbody>tr:first-child{
+        background: $gradient-color;
+        color: $black-color;
+    }
+
+    table tbody>tr:first-child >td{
+        color: $light-color !important;
+        p,span,h1,h2,h3,h4,h5,h6{
+            color: $light-color !important;
+        }
+    }
+
+    table tbody>tr>td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border: 1px solid #ddd;
+        text-align: center;
+        p{
+            margin: 0 !important;
+        }
+    }
+
+    table tbody>tr:nth-child(even){
+        background: #ddd;
+    }
+
+    img{
+        max-width: 100% !important;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin: auto;
+    }
+
+    iframe {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 10px;
+        height: 476px;
+        border: 0;
+    }
+}
+
+@media (max-width: 991.98px){
+    .inner-content{
+
+        p,span{
+            font-size: 1.3rem !important;
+            line-height: 1.7 !important;
+            max-width: 100%;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-size: 1.4rem !important;
+            p,span{
+                font-size: 1.3rem !important;
+                line-height: 1.7 !important
+            }
+        }
+
+        ul,ol{
+            padding-left: 1rem;
+            li{
+                font-size: 1.1rem;
+                line-height: 1.6 !important
+            }
+        }
+        iframe {height: 250px;}
+
+        table {
+            width: 100%!important;
+            display: block;
+            border: 0;
+            height: auto !important;
+            overflow-x: scroll;
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                width: 0 !important
+            }
+        }
+    }
+}
+
+.rtl{
+    @media (max-width: 991.98px){
+        .inner-content{
+            ul,ol{padding-right: 1.2rem;padding-left: 0;}
+        }
+    }
+}
+
+.theme-dark{
+    span,p{
+        color: $light-color !important;
+    }
+}
